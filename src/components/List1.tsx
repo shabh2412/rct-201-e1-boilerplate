@@ -19,12 +19,14 @@ const List1 = ({ initialValues, label }: List1Props) => {
 				{/* Label */}
 				{label}
 			</h3>
-			{/* Iterate List and wrap the element div below inside */}
-			{list.map((ele, id) => (
-				<div key={ele + id} data-testid="list1-element">
-					{ele}
-				</div>
-			))}
+			<div style={{ display: "flex", gap: "10px" }}>
+				{/* Iterate List and wrap the element div below inside */}
+				{list.map((ele, id) => (
+					<div key={ele + id} data-testid="list1-element">
+						{ele}
+					</div>
+				))}
+			</div>
 
 			<input
 				data-testid="list1-input"
